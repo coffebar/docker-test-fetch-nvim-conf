@@ -21,3 +21,9 @@ sh ./clean.sh
 ```
 
 Note: AI and other credentials not included
+
+### Install process video demo
+
+https://github.com/coffebar/docker-test-fetch-nvim-conf/assets/3100053/029fa370-1d96-495c-889c-529a4fe4df98
+
+*The video has been sped up
