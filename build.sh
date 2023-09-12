@@ -10,4 +10,4 @@ CMD="$(wget -O- https://raw.githubusercontent.com/coffebar/dotfiles/master/fetch
 # will run nvim after setup
 CMD="$CMD ; nvim -c checkhealth"
 # run code inside container and remove it after exit nvim
-docker run --rm -it "$IMAGE_NAME" sh -c "$CMD"
+docker run --rm -it --tmpfs /tmp "$IMAGE_NAME" sh -c "$CMD"
