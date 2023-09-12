@@ -9,9 +9,9 @@ fi
 # fetch nvim config setup script
 CMD="$(wget -O- https://raw.githubusercontent.com/coffebar/dotfiles/master/fetch-nvim-conf.sh)"
 # will run nvim after setup
-CMD="$CMD ; nvim"
+CMD="$CMD ; nvim -c checkhealth"
 # run container and remove it after exit nvim
 docker run --rm -it --user neovim \
-	-e PATH='/home/neovim/.node_modules/bin:/home/neovim/go/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/rustup/bin' \
+	-e PATH='/home/neovim/.local/share/pnpm:/home/neovim/.node_modules/bin:/home/neovim/go/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/rustup/bin' \
 	-w /home/neovim \
 	"$IMAGE_NAME" sh -c "$CMD"
