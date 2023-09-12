@@ -18,3 +18,8 @@ USER neovim
 
 # Clone the 'yay' AUR helper and install it
 RUN cd /tmp/ && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg --noconfirm -si && yay -Y --gendb && yay -y
+
+WORKDIR /home/neovim
+
+ENV PATH="/home/neovim/.local/share/pnpm:/home/neovim/.node_modules/bin:/home/neovim/go/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/rustup/bin"
+
