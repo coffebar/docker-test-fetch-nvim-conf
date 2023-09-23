@@ -17,4 +17,3 @@ RUN echo "neovim ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 USER neovim
 
 WORKDIR /home/neovim
-
