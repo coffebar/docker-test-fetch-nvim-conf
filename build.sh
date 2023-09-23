@@ -8,6 +8,6 @@ docker build -t "$IMAGE_NAME" . || exit 1
 # fetch nvim config setup script
 CMD="$(wget -O- https://raw.githubusercontent.com/coffebar/dotfiles/master/fetch-nvim-conf.sh)"
 # will run nvim after setup
-CMD="$CMD ; nvim -c checkhealth"
+CMD="$CMD ; nvim -c checkhealth; sh"
 # run code inside container and remove it after exit nvim
 docker run --rm -it --tmpfs /tmp "$IMAGE_NAME" sh -c "$CMD"
